@@ -1,0 +1,8 @@
+{
+  "buildCommand": "cd presentations/Perfin_IA && npm install && npm run build",
+  "outputDirectory": "presentations/Perfin_IA/.next",
+  "installCommand": "cd presentations/Perfin_IA && npm install",
+  "framework": "nextjs",
+  "rootDirectory": "presentations/Perfin_IA"
+}
+
