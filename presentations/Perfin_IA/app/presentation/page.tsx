@@ -522,7 +522,7 @@ function Slide06_DeepDiveInvestimentos() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary-400 mt-1">2.</span>
-                <span>Lê centenas de páginas para extrair: margem EBITDA, CAPEX, guidance, riscos</span>
+                <span>Lê documentos para extrair: margem EBITDA, CAPEX, guidance, riscos</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="text-primary-400 mt-1">3.</span>
@@ -535,7 +535,7 @@ function Slide06_DeepDiveInvestimentos() {
             </ul>
             <div className="p-3 bg-neutral-900/50 rounded border border-neutral-800 mt-4">
               <p className="text-sm text-neutral-400">
-                <strong className="text-neutral-200">Tempo:</strong> Dias de trabalho analítico por comparação setorial
+                <strong className="text-neutral-200">Tempo:</strong> Trabalho analítico significativo por comparação setorial
               </p>
             </div>
           </div>
@@ -562,7 +562,7 @@ function Slide06_DeepDiveInvestimentos() {
             </ul>
             <div className="p-3 bg-green-900/20 rounded border border-green-800/30 mt-4">
               <p className="text-sm text-green-300">
-                <strong className="text-green-200">Tempo:</strong> Horas, com foco em interpretação estratégica
+                <strong className="text-green-200">Ganho:</strong> Foco em interpretação estratégica, não em extração manual
               </p>
             </div>
           </div>
