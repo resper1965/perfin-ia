@@ -9,7 +9,7 @@ import { ReactNode } from 'react'
 import { motion } from 'framer-motion'
 import { LucideIcon } from 'lucide-react'
 import { cn } from '@/lib/utils'
-import { NessText } from '@/components/ui/ness-text'
+import { NessLogo } from '@/components/ui/ness-logo'
 
 // ==================== HERO SLIDE CORPORATIVO ====================
 
@@ -104,7 +104,7 @@ export function HeroSlide({
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6, duration: 1 }}
         >
-          <NessText variant="dark" size="xl" />
+          <NessLogo variant="dark" size="lg" />
         </motion.div>
       </div>
     </div>

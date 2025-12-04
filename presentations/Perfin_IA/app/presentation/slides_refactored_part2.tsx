@@ -25,6 +25,8 @@ import {
   QuoteBox
 } from '@/components/slides/CorporateLayouts'
 
+import { NessLogo } from '@/components/ui/ness-logo'
+
 // ========== SLIDE 07: DEEP DIVE INVESTIMENTOS ==========
 export function Slide07_DeepDiveInvestimentos() {
   return (
@@ -497,17 +499,12 @@ export function Slide12_CTAFinal() {
         />
 
         <div className="mt-16 text-center">
-          <p className="text-xl text-neutral-400 mb-4">
+          <p className="text-xl text-neutral-400 mb-6">
             Apresentado por
           </p>
-          <div className="flex items-center justify-center gap-4">
-            <div className="text-5xl">
-              <NessText variant="dark" size="5xl" />
-            </div>
+          <div className="flex items-center justify-center">
+            <NessLogo variant="dark" size="5xl" showTagline tagline="Processos e Tecnologia" />
           </div>
-          <p className="text-lg text-neutral-500 mt-4">
-            Processos e Tecnologia
-          </p>
         </div>
       </div>
     </div>

@@ -45,7 +45,7 @@ import {
 } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
-import { NessText } from '@/components/ui/ness-text'
+import { NessLogo } from '@/components/ui/ness-logo'
 
 // Novos Layouts Corporativos Premium
 import {
@@ -92,8 +92,8 @@ function Slide01_Hero() {
       backgroundGradient="brand"
       alignment="center"
     >
-      <div className="flex items-center gap-4 text-primary-400 font-medium text-xl">
-        <span>NESS Processos e Tecnologia</span>
+      <div className="flex flex-col items-center gap-2">
+        <NessLogo variant="dark" size="2xl" showTagline tagline="Processos e Tecnologia" />
       </div>
     </HeroSlide>
   )
