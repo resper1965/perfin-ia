@@ -135,7 +135,7 @@ export function StatCard({
 
         {/* Value */}
         <div className="flex items-end justify-between">
-          <div className="text-3xl font-bold text-slate-100">
+          <div className="text-xl font-bold text-slate-100">
             {value}
           </div>
 

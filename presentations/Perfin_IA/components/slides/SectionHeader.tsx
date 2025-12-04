@@ -43,7 +43,7 @@ export function SectionHeader({
 
         <div className={cn('relative flex flex-col gap-4 p-8 rounded-2xl border border-primary-500/20', alignmentClass)}>
           {number && (
-            <div className="text-7xl font-bold text-primary-500/20 tabular-nums">
+            <div className="text-xl font-bold text-primary-500/20 tabular-nums">
               {number.toString().padStart(2, '0')}
             </div>
           )}
@@ -55,7 +55,7 @@ export function SectionHeader({
           )}
 
           <div className="space-y-2">
-            <h2 className="text-5xl md:text-6xl font-medium font-montserrat text-neutral-50 leading-tight">
+            <h2 className="text-xl md:text-lg font-medium font-montserrat text-neutral-50 leading-tight">
               {title}
             </h2>
             {subtitle && (
@@ -82,7 +82,7 @@ export function SectionHeader({
             <Icon className="w-6 h-6 text-primary-400 shrink-0" strokeWidth={1.5} />
           )}
           <div className="space-y-1">
-            <h2 className="text-3xl font-medium font-montserrat text-neutral-50">
+            <h2 className="text-xl font-medium font-montserrat text-neutral-50">
               {title}
             </h2>
             {subtitle && (
@@ -127,11 +127,11 @@ export function SectionHeader({
           </div>
 
           <div className="space-y-3">
-            <h2 className="text-6xl md:text-7xl font-medium font-montserrat text-neutral-50 leading-none">
+            <h2 className="text-lg md:text-xl font-medium font-montserrat text-neutral-50 leading-none">
               {title}
             </h2>
             {subtitle && (
-              <p className="text-2xl text-neutral-400 max-w-4xl">
+              <p className="text-lg text-neutral-400 max-w-4xl">
                 {subtitle}
               </p>
             )}
@@ -152,7 +152,7 @@ export function SectionHeader({
       <div className={cn('flex gap-4', alignmentClass)}>
         {number && (
           <div className="shrink-0">
-            <div className="text-5xl font-bold text-primary-500/30 tabular-nums">
+            <div className="text-xl font-bold text-primary-500/30 tabular-nums">
               {number.toString().padStart(2, '0')}
             </div>
           </div>
@@ -165,7 +165,7 @@ export function SectionHeader({
         )}
 
         <div className="space-y-2">
-          <h2 className="text-4xl md:text-5xl font-medium font-montserrat text-neutral-50 leading-tight">
+          <h2 className="text-lg md:text-xl font-medium font-montserrat text-neutral-50 leading-tight">
             {title}
           </h2>
           {subtitle && (
@@ -212,7 +212,7 @@ export function SubsectionHeader({
 
       <div className="flex-1 min-w-0">
         <div className="flex items-center gap-3 mb-1 flex-wrap">
-          <h3 className="text-2xl font-semibold font-montserrat text-neutral-100">
+          <h3 className="text-lg font-semibold font-montserrat text-neutral-100">
             {title}
           </h3>
           {badge}

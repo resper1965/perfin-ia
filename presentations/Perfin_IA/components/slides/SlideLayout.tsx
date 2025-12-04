@@ -90,7 +90,7 @@ export function SlideLayout({
             )}
 
             <div className="flex-1 space-y-3">
-              <h1 className="text-5xl md:text-6xl font-light font-montserrat text-neutral-50 tracking-tight leading-tight">
+              <h1 className="text-xl md:text-lg font-light font-montserrat text-neutral-50 tracking-tight leading-tight">
                 {title}
               </h1>
 

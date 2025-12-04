@@ -129,7 +129,7 @@ function Slide01_LogoNess() {
         <div className="relative p-16 rounded-3xl bg-gradient-to-br from-primary-500/10 to-primary-600/5 border-2 border-primary-500/30">
           <div className="text-center space-y-6">
             <div className="space-y-2">
-              <h1 className="text-7xl md:text-8xl font-montserrat font-medium tracking-tight">
+              <h1 className="text-xl md:text-8xl font-montserrat font-medium tracking-tight">
                 <NessText variant="dark" size="7xl" />
               </h1>
               <p className="text-xl text-neutral-400">Inteligência Artificial</p>
@@ -160,11 +160,11 @@ function Slide01_Titulo() {
           transition={{ delay: 0.3, duration: 0.6 }}
           className="space-y-8"
         >
-          <h1 className="text-6xl md:text-7xl font-medium font-montserrat text-neutral-50 leading-tight">
+          <h1 className="text-lg md:text-xl font-medium font-montserrat text-neutral-50 leading-tight">
             IA Aplicada à Perfin
           </h1>
 
-          <p className="text-2xl md:text-3xl text-neutral-300 font-light leading-relaxed max-w-4xl mx-auto">
+          <p className="text-lg md:text-xl text-neutral-300 font-light leading-relaxed max-w-4xl mx-auto">
             Acelerando análise de investimentos, jurídico e backoffice com segurança regulatória
           </p>
 
@@ -190,7 +190,7 @@ function Slide02_PerfinHoje() {
       <ContentContainer variant="stack" gap={6}>
         <div className="space-y-6">
           <div>
-            <h3 className="text-2xl font-medium font-montserrat text-primary-400 mb-4">Complexidade e diversificação crescentes:</h3>
+            <h3 className="text-lg font-medium font-montserrat text-primary-400 mb-4">Complexidade e diversificação crescentes:</h3>
             <ul className="space-y-3 text-lg text-neutral-300 leading-relaxed">
               <li className="flex items-start gap-3">
                 <span className="text-primary-400 mt-1">•</span>
@@ -208,7 +208,7 @@ function Slide02_PerfinHoje() {
           </div>
 
           <div className="pt-4">
-            <h3 className="text-2xl font-medium font-montserrat text-primary-400 mb-4">Áreas com pressão identificadas:</h3>
+            <h3 className="text-lg font-medium font-montserrat text-primary-400 mb-4">Áreas com pressão identificadas:</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="p-4 bg-neutral-900/50 rounded-lg border border-neutral-800">
                 <p className="font-medium text-neutral-200 mb-2">Jurídico:</p>
@@ -251,7 +251,7 @@ function Slide03_OQueIAPodeFazer() {
       <ContentContainer variant="stack" gap={6}>
         <div className="space-y-6">
           <div>
-            <h3 className="text-2xl font-medium font-montserrat text-primary-400 mb-4">LLM = "Analista generalista" de processamento de texto:</h3>
+            <h3 className="text-lg font-medium font-montserrat text-primary-400 mb-4">LLM = "Analista generalista" de processamento de texto:</h3>
             <ul className="space-y-3 text-lg text-neutral-300 leading-relaxed">
               <li className="flex items-start gap-3">
                 <CheckCircle2 className="text-green-400 mt-1 shrink-0" size={20} />
@@ -265,7 +265,7 @@ function Slide03_OQueIAPodeFazer() {
           </div>
 
           <div className="pt-4">
-            <h3 className="text-2xl font-medium font-montserrat text-red-400 mb-4">Limitação crítica: Alucinação</h3>
+            <h3 className="text-lg font-medium font-montserrat text-red-400 mb-4">Limitação crítica: Alucinação</h3>
             <ul className="space-y-3 text-lg text-neutral-300 leading-relaxed">
               <li className="flex items-start gap-3">
                 <AlertTriangle className="text-red-400 mt-1 shrink-0" size={20} />
@@ -304,7 +304,7 @@ function Slide04_BaseConhecimento() {
       <ContentContainer variant="stack" gap={6}>
         <div className="space-y-6">
           <div>
-            <h3 className="text-2xl font-medium font-montserrat text-primary-400 mb-4">Repositório privado e conectado aos sistemas da Perfin:</h3>
+            <h3 className="text-lg font-medium font-montserrat text-primary-400 mb-4">Repositório privado e conectado aos sistemas da Perfin:</h3>
             <ul className="space-y-3 text-lg text-neutral-300 leading-relaxed">
               <li className="flex items-start gap-3">
                 <span className="text-primary-400 mt-1">•</span>
@@ -400,14 +400,14 @@ function Slide05_AgentesInteligentes() {
       <ContentContainer variant="stack" gap={6}>
         <div className="space-y-6">
           <div>
-            <h3 className="text-2xl font-medium font-montserrat text-primary-400 mb-4">Combinação:</h3>
+            <h3 className="text-lg font-medium font-montserrat text-primary-400 mb-4">Combinação:</h3>
             <p className="text-lg text-neutral-300 mb-4">
               LLM + Base de Conhecimento + Ferramentas (ERPs, planilhas, APIs)
             </p>
           </div>
 
           <div>
-            <h3 className="text-2xl font-medium font-montserrat text-primary-400 mb-4">Capacidades:</h3>
+            <h3 className="text-lg font-medium font-montserrat text-primary-400 mb-4">Capacidades:</h3>
             <ul className="space-y-3 text-lg text-neutral-300 leading-relaxed">
               <li className="flex items-start gap-3">
                 <CheckCircle2 className="text-green-400 mt-1 shrink-0" size={20} />
@@ -704,7 +704,7 @@ function Slide08_SegurancaCompliance() {
       <ContentContainer variant="stack" gap={6}>
         <div className="space-y-6">
           <div>
-            <h3 className="text-2xl font-medium font-montserrat text-red-400 mb-4">Riscos inerentes:</h3>
+            <h3 className="text-lg font-medium font-montserrat text-red-400 mb-4">Riscos inerentes:</h3>
             <ul className="space-y-3 text-lg text-neutral-300 leading-relaxed">
               <li className="flex items-start gap-3">
                 <AlertTriangle className="text-red-400 mt-1 shrink-0" size={20} />
@@ -722,7 +722,7 @@ function Slide08_SegurancaCompliance() {
           </div>
 
           <div>
-            <h3 className="text-2xl font-medium font-montserrat text-primary-400 mb-4">Camadas de mitigação:</h3>
+            <h3 className="text-lg font-medium font-montserrat text-primary-400 mb-4">Camadas de mitigação:</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="p-4 bg-neutral-900/50 rounded-lg border border-neutral-800">
                 <p className="font-medium text-neutral-200 mb-2">Base de Conhecimento Privada:</p>
@@ -748,7 +748,7 @@ function Slide08_SegurancaCompliance() {
           </div>
 
           <div>
-            <h3 className="text-2xl font-medium font-montserrat text-primary-400 mb-4">Governança proposta:</h3>
+            <h3 className="text-lg font-medium font-montserrat text-primary-400 mb-4">Governança proposta:</h3>
             <ul className="space-y-2 text-lg text-neutral-300 leading-relaxed">
               <li className="flex items-start gap-3">
                 <span className="text-primary-400 mt-1">•</span>
@@ -842,7 +842,7 @@ function Slide09_Jornada() {
       <ContentContainer variant="stack" gap={6}>
         <div className="space-y-6">
           <div>
-            <h3 className="text-2xl font-medium font-montserrat text-primary-400 mb-4">Fase 1 – Descoberta e Prova de Valor</h3>
+            <h3 className="text-lg font-medium font-montserrat text-primary-400 mb-4">Fase 1 – Descoberta e Prova de Valor</h3>
             <ul className="space-y-2 text-lg text-neutral-300 leading-relaxed">
               <li className="flex items-start gap-3">
                 <span className="text-primary-400 mt-1">•</span>
@@ -868,7 +868,7 @@ function Slide09_Jornada() {
           </div>
 
           <div>
-            <h3 className="text-2xl font-medium font-montserrat text-primary-400 mb-4">Fase 2 – Integração Operacional</h3>
+            <h3 className="text-lg font-medium font-montserrat text-primary-400 mb-4">Fase 2 – Integração Operacional</h3>
             <ul className="space-y-2 text-lg text-neutral-300 leading-relaxed">
               <li className="flex items-start gap-3">
                 <span className="text-primary-400 mt-1">•</span>
@@ -886,7 +886,7 @@ function Slide09_Jornada() {
           </div>
 
           <div>
-            <h3 className="text-2xl font-medium font-montserrat text-primary-400 mb-4">Fase 3 – Plataforma de IA da Perfin</h3>
+            <h3 className="text-lg font-medium font-montserrat text-primary-400 mb-4">Fase 3 – Plataforma de IA da Perfin</h3>
             <ul className="space-y-2 text-lg text-neutral-300 leading-relaxed">
               <li className="flex items-start gap-3">
                 <span className="text-primary-400 mt-1">•</span>
@@ -923,7 +923,7 @@ function Slide10_ProximosPassos() {
       <ContentContainer variant="stack" gap={6}>
         <div className="space-y-6">
           <div>
-            <h3 className="text-2xl font-medium font-montserrat text-primary-400 mb-4">Nossa proposta:</h3>
+            <h3 className="text-lg font-medium font-montserrat text-primary-400 mb-4">Nossa proposta:</h3>
             
             <div className="space-y-4">
               <div className="p-6 bg-neutral-900/50 rounded-lg border border-neutral-800">
@@ -965,7 +965,7 @@ function Slide10_ProximosPassos() {
           </div>
 
           <div className="pt-4">
-            <h3 className="text-2xl font-medium font-montserrat text-primary-400 mb-4">Por que NESS:</h3>
+            <h3 className="text-lg font-medium font-montserrat text-primary-400 mb-4">Por que NESS:</h3>
             <ul className="space-y-3 text-lg text-neutral-300 leading-relaxed">
               <li className="flex items-start gap-3">
                 <span className="text-primary-400 mt-1">•</span>
@@ -1561,7 +1561,7 @@ function Slide18_DivisorNsecops() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-6xl md:text-7xl font-light font-montserrat text-slate-100 tracking-tight">
+          <h1 className="text-lg md:text-xl font-light font-montserrat text-slate-100 tracking-tight">
             <NessText variant="dark" size="7xl" />
           </h1>
         </motion.div>
@@ -1943,11 +1943,11 @@ function Slide26_MockupSOC() {
           transition={{ duration: 0.6 }}
           className="text-center space-y-4"
         >
-          <h1 className="text-6xl md:text-7xl font-montserrat font-medium tracking-tight">
+          <h1 className="text-lg md:text-xl font-montserrat font-medium tracking-tight">
             <span className="text-neutral-50">trustness</span>
             <span className="text-[#00ade8]">.</span>
           </h1>
-          <p className="text-2xl text-neutral-400">
+          <p className="text-lg text-neutral-400">
             a <span className="text-neutral-300">ness</span><span className="text-[#00ade8]">.</span> company
           </p>
         </motion.div>
@@ -1980,7 +1980,7 @@ function Slide26_MockupSOC() {
           <div className="grid grid-cols-4 gap-4 mb-6">
             <div className="bg-neutral-800/50 rounded-xl p-4 border border-neutral-700/50">
               <div className="text-xs text-neutral-400 mb-1">Vulnerabilidades Ativas</div>
-              <div className="text-2xl font-bold text-neutral-50">
+              <div className="text-lg font-bold text-neutral-50">
                 {totalVulnerabilitiesTrend.length > 0 
                   ? totalVulnerabilitiesTrend[totalVulnerabilitiesTrend.length - 1].total 
                   : 0}
@@ -1993,7 +1993,7 @@ function Slide26_MockupSOC() {
             </div>
             <div className="bg-neutral-800/50 rounded-xl p-4 border border-neutral-700/50">
               <div className="text-xs text-neutral-400 mb-1">Vulnerabilidades Críticas</div>
-              <div className="text-2xl font-bold text-red-400">
+              <div className="text-lg font-bold text-red-400">
                 {totalVulnerabilitiesTrend.length > 0 
                   ? totalVulnerabilitiesTrend[totalVulnerabilitiesTrend.length - 1].criticas 
                   : 0}
@@ -2006,14 +2006,14 @@ function Slide26_MockupSOC() {
             </div>
             <div className="bg-neutral-800/50 rounded-xl p-4 border border-neutral-700/50">
               <div className="text-xs text-neutral-400 mb-1">Assets Monitorados</div>
-              <div className="text-2xl font-bold text-neutral-50">{vulnerabilityScanScope.total}</div>
+              <div className="text-lg font-bold text-neutral-50">{vulnerabilityScanScope.total}</div>
               <div className="text-xs text-green-400 mt-1">
                 {vulnerabilityScanScope.servidores} servidores + {vulnerabilityScanScope.estacoes} estações
               </div>
             </div>
             <div className="bg-neutral-800/50 rounded-xl p-4 border border-neutral-700/50">
               <div className="text-xs text-neutral-400 mb-1">Tempo Médio Resposta</div>
-              <div className="text-2xl font-bold text-primary-400">3 min</div>
+              <div className="text-lg font-bold text-primary-400">3 min</div>
               <div className="text-xs text-green-400 mt-1">Meta: &lt;5min</div>
             </div>
           </div>

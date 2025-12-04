@@ -40,7 +40,7 @@ export function MetricCard({ label, value, description, icon: Icon, trend, delay
                     {label}
                 </div>
 
-                <div className={`text-5xl md:text-6xl font-extrabold ${trend ? trendColors[trend] : 'text-gradient-primary'
+                <div className={`text-xl md:text-lg font-extrabold ${trend ? trendColors[trend] : 'text-gradient-primary'
                     } animate-pulse-subtle`}>
                     {value}
                 </div>

@@ -152,7 +152,7 @@ export function InfoPanel({
                   <Icon className={cn('w-6 h-6', styles.icon)} strokeWidth={1.5} />
                 </div>
               )}
-              <h3 className="text-2xl font-semibold text-neutral-50">
+              <h3 className="text-lg font-semibold text-neutral-50">
                 {title}
               </h3>
             </div>
@@ -300,7 +300,7 @@ export function StatsRow({ stats, className }: StatsRowProps) {
           {stat.icon && (
             <stat.icon className="w-6 h-6 text-primary-400 mx-auto mb-2" strokeWidth={1.5} />
           )}
-          <div className="text-3xl font-bold text-neutral-50 tabular-nums mb-1">
+          <div className="text-xl font-bold text-neutral-50 tabular-nums mb-1">
             {stat.value}
           </div>
           <div className="text-sm text-neutral-400 uppercase tracking-wider">

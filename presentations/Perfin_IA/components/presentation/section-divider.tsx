@@ -25,7 +25,7 @@ export function SectionDivider({ title, subtitle, className = '' }: SectionDivid
                     className="absolute -top-8 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-blue-500 to-transparent"
                 />
 
-                <h2 className="text-5xl md:text-6xl font-light text-slate-100 text-center tracking-tight">
+                <h2 className="text-xl md:text-lg font-light text-slate-100 text-center tracking-tight">
                     {title}
                 </h2>
             </div>

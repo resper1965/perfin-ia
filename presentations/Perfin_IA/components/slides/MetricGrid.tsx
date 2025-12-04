@@ -197,7 +197,7 @@ function DefaultMetricCard({ metric, delay }: { metric: Metric; delay: number })
         {/* Value */}
         <div className="flex items-baseline justify-between">
           <div className={cn(
-            'text-3xl md:text-4xl font-bold tabular-nums',
+            'text-xl md:text-lg font-bold tabular-nums',
             styles.value
           )}>
             {metric.value}
@@ -353,7 +353,7 @@ function DetailedMetricCard({ metric, delay }: { metric: Metric; delay: number }
         {/* Value + Trend */}
         <div className="space-y-2">
           <div className={cn(
-            'text-5xl font-bold tabular-nums',
+            'text-xl font-bold tabular-nums',
             styles.value
           )}>
             {metric.value}

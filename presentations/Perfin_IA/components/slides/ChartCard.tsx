@@ -158,7 +158,7 @@ export function ChartCard({
 
             {insight && (
               <div className="ml-4 text-right shrink-0">
-                <div className="text-2xl font-bold text-neutral-50 tabular-nums">
+                <div className="text-lg font-bold text-neutral-50 tabular-nums">
                   {insight.value}
                 </div>
                 <div className="flex items-center justify-end gap-1.5 mt-1">

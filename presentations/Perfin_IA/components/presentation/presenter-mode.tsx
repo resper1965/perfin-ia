@@ -59,7 +59,7 @@ export function PresenterTimer({ targetMinutes = 30 }: PresenterTimerProps) {
         {/* Timer Display */}
         <div className="text-center">
           <div className={cn(
-            "text-5xl font-bold font-mono tabular-nums",
+            "text-xl font-bold font-mono tabular-nums",
             isOvertime ? "text-red-400" : "text-primary"
           )}>
             {formatTime(seconds)}

@@ -124,7 +124,7 @@ export function DataCard({
         {/* Value */}
         <div className="space-y-3">
           <div className="flex items-baseline justify-between">
-            <div className="text-4xl md:text-5xl font-bold text-neutral-50 tabular-nums">
+            <div className="text-lg md:text-xl font-bold text-neutral-50 tabular-nums">
               {value}
             </div>
 

@@ -54,7 +54,7 @@ export function EnhancedContentSlide({
           )}
           <div className="flex-1">
             <h2 className={cn(
-              "text-4xl md:text-5xl font-light font-montserrat text-slate-100",
+              "text-lg md:text-xl font-light font-montserrat text-slate-100",
               !TitleIcon && "border-l-4 border-primary pl-6"
             )}>
               {title}

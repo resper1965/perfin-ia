@@ -66,20 +66,20 @@ export function HeroSlide({
           className="space-y-8"
         >
           {/* Title */}
-          <h1 className="text-6xl md:text-7xl lg:text-8xl font-medium font-montserrat text-white leading-[1.1] tracking-tight">
+          <h1 className="text-lg md:text-xl lg:text-8xl font-medium font-montserrat text-white leading-[1.1] tracking-tight">
             {title}
           </h1>
 
           {/* Subtitle */}
           {subtitle && (
-            <p className="text-2xl md:text-3xl lg:text-4xl text-neutral-300 font-light leading-relaxed max-w-4xl">
+            <p className="text-lg md:text-xl lg:text-lg text-neutral-300 font-light leading-relaxed max-w-4xl">
               {subtitle}
             </p>
           )}
 
           {/* Description */}
           {description && (
-            <p className="text-xl md:text-2xl text-neutral-400 font-light leading-relaxed max-w-3xl pt-4">
+            <p className="text-xl md:text-lg text-neutral-400 font-light leading-relaxed max-w-3xl pt-4">
               {description}
             </p>
           )}
@@ -149,7 +149,7 @@ export function SplitLayout({
             </div>
           )}
           <div>
-            <h1 className="text-5xl font-medium font-montserrat text-white tracking-tight">
+            <h1 className="text-xl font-medium font-montserrat text-white tracking-tight">
               {title}
             </h1>
             {subtitle && (
@@ -232,7 +232,7 @@ export function ContentCard({
       {title && (
         <div className="flex items-center gap-3 mb-6">
           {Icon && <Icon className="w-6 h-6 text-primary-400" />}
-          <h3 className="text-2xl font-medium font-montserrat text-white">
+          <h3 className="text-lg font-medium font-montserrat text-white">
             {title}
           </h3>
         </div>
@@ -350,7 +350,7 @@ export function StatsDashboard({ stats, columns = 4 }: StatsDashboardProps) {
           </div>
 
           <div className="flex items-baseline gap-3">
-            <p className="text-5xl font-medium font-montserrat text-white">
+            <p className="text-xl font-medium font-montserrat text-white">
               {stat.value}
             </p>
 
@@ -394,9 +394,9 @@ export function QuoteBox({ quote, author, variant = 'default' }: QuoteBoxProps) 
       variants[variant]
     )}>
       <div className="flex items-start gap-4">
-        <span className="text-6xl text-primary-500/30 font-serif leading-none">"</span>
+        <span className="text-lg text-primary-500/30 font-serif leading-none">"</span>
         <div className="flex-1 pt-4">
-          <p className="text-2xl text-white font-light leading-relaxed mb-6">
+          <p className="text-lg text-white font-light leading-relaxed mb-6">
             {quote}
           </p>
           {author && (
@@ -454,7 +454,7 @@ export function TimelineCorporate({ items, orientation = 'horizontal' }: Timelin
               <div className="text-sm uppercase tracking-wider text-primary-400 font-medium mb-2">
                 {item.phase}
               </div>
-              <h3 className="text-2xl font-medium font-montserrat text-white mb-3">
+              <h3 className="text-lg font-medium font-montserrat text-white mb-3">
                 {item.title}
               </h3>
               <p className="text-lg text-neutral-400 leading-relaxed">
@@ -541,7 +541,7 @@ export function CTAPremium({
       "p-12 rounded-3xl bg-gradient-to-br from-primary-900/20 via-neutral-900/50 to-neutral-900/30 border border-primary-500/20",
       variant === 'centered' && "text-center"
     )}>
-      <h2 className="text-4xl font-medium font-montserrat text-white mb-4">
+      <h2 className="text-lg font-medium font-montserrat text-white mb-4">
         {title}
       </h2>
 
