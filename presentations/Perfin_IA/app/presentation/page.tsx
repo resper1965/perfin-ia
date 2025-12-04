@@ -2080,7 +2080,6 @@ export default function ProfessionalPresentation() {
     { component: Slide08_SegurancaCompliance, notes: 'Segurança, Compliance e Governança' },
     { component: Slide09_Jornada, notes: 'Jornada (proposta inicial para discussão)' },
     { component: Slide10_ProximosPassos, notes: 'Próximos Passos' },
-    { component: Slide11_DivisorVulnerabilidades, notes: 'Divisor: Gestão de Vulnerabilidades' },
   ]
 
   const nextSlide = () => {
