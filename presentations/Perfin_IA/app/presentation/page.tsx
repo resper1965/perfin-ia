@@ -199,22 +199,6 @@ function Slide02_PerfinHoje() {
       icon: Network,
       color: 'purple' as const,
       sparklineData: [5, 6, 7, 7, 8]
-    },
-    {
-      label: 'Documentos/Ano',
-      value: '2.5k+',
-      icon: FileText,
-      color: 'amber' as const,
-      trend: { value: 40, direction: 'up' as const },
-      sparklineData: [1200, 1600, 2000, 2300, 2500]
-    },
-    {
-      label: 'Horas Análise/Mês',
-      value: '1.2k+',
-      icon: Clock,
-      color: 'rose' as const,
-      trend: { value: 35, direction: 'up' as const },
-      sparklineData: [600, 800, 1000, 1100, 1200]
     }
   ]
 
@@ -229,25 +213,28 @@ function Slide02_PerfinHoje() {
           {/* Metrics Dashboard */}
           <MetricsDashboardRich
             metrics={portfolioMetrics}
-            columns={4}
+            columns={2}
           />
 
           <div>
             <h3 className="text-lg font-medium font-montserrat text-primary-400 mb-4">Complexidade e diversificação crescentes:</h3>
-            <ul className="space-y-3 text-lg text-slate-300 leading-relaxed">
-              <li className="flex items-start gap-3">
-                <span className="text-primary-400 mt-1">•</span>
-                <span>Portfólio diversificado em infraestrutura e equity</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-primary-400 mt-1">•</span>
-                <span>Múltiplas verticais: transmissão, rodovias, saneamento, geração de energia, ações</span>
-              </li>
-              <li className="flex items-start gap-3">
-                <span className="text-primary-400 mt-1">•</span>
-                <span>Due diligences técnicos, jurídicos e financeiros em frentes simultâneas</span>
-              </li>
-            </ul>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div className="p-4 bg-slate-900/50 rounded-lg border border-slate-800">
+                <p className="text-lg text-slate-300 leading-relaxed">
+                  <span className="text-primary-400">•</span> Portfólio diversificado em infraestrutura e equity
+                </p>
+              </div>
+              <div className="p-4 bg-slate-900/50 rounded-lg border border-slate-800">
+                <p className="text-lg text-slate-300 leading-relaxed">
+                  <span className="text-primary-400">•</span> Múltiplas verticais: transmissão, rodovias, saneamento, geração de energia, ações
+                </p>
+              </div>
+              <div className="p-4 bg-slate-900/50 rounded-lg border border-slate-800">
+                <p className="text-lg text-slate-300 leading-relaxed">
+                  <span className="text-primary-400">•</span> Due diligences técnicos, jurídicos e financeiros em frentes simultâneas
+                </p>
+              </div>
+            </div>
           </div>
 
           <div className="pt-4">
