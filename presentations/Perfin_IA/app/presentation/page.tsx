@@ -184,24 +184,6 @@ function Slide01_Titulo() {
 
 // ========== SLIDE 2: PERFIN HOJE - O DESAFIO DE ESCALA ==========
 function Slide02_PerfinHoje() {
-  const portfolioMetrics = [
-    {
-      label: 'Ativos em Portfólio',
-      value: '15+',
-      icon: TrendingUp,
-      color: 'blue' as const,
-      trend: { value: 25, direction: 'up' as const },
-      sparklineData: [8, 10, 12, 13, 15]
-    },
-    {
-      label: 'Verticais de Negócio',
-      value: '8',
-      icon: Network,
-      color: 'purple' as const,
-      sparklineData: [5, 6, 7, 7, 8]
-    }
-  ]
-
   return (
     <SlideLayout
       title="Perfin hoje: O desafio de escala"
@@ -210,12 +192,6 @@ function Slide02_PerfinHoje() {
     >
       <ContentContainer variant="stack" gap={6}>
         <div className="space-y-6">
-          {/* Metrics Dashboard */}
-          <MetricsDashboardRich
-            metrics={portfolioMetrics}
-            columns={2}
-          />
-
           <div>
             <h3 className="text-lg font-medium font-montserrat text-primary-400 mb-4">Complexidade e diversificação crescentes:</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -238,7 +214,7 @@ function Slide02_PerfinHoje() {
           </div>
 
           <div className="pt-4">
-            <h3 className="text-lg font-medium font-montserrat text-primary-400 mb-4">Áreas com pressão identificadas:</h3>
+            <h3 className="text-lg font-medium font-montserrat text-primary-400 mb-4">Áreas onde IA costuma gerar impacto em asset management:</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="p-4 bg-slate-900/50 rounded-lg border border-slate-800">
                 <p className="font-medium text-slate-200 mb-2">Jurídico:</p>
@@ -259,9 +235,9 @@ function Slide02_PerfinHoje() {
             </div>
           </div>
 
-          <InfoPanel variant="highlight" status="warning">
+          <InfoPanel variant="highlight" status="info">
             <p className="text-lg">
-              <strong>Tensão:</strong> Equipes especializadas vs. volume crescente de informação não-estruturada
+              <strong>Nossa proposta:</strong> entender onde a Perfin mais precisa de escala
             </p>
           </InfoPanel>
         </div>
@@ -1028,7 +1004,7 @@ function Slide10_ProximosPassos() {
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-primary-400 mt-1">•</span>
-                    <span><strong>Objetivo:</strong> Mapear dores específicas, volume de documentos, workflows atuais</span>
+                    <span><strong>Objetivo:</strong> Descobrir juntos onde há oportunidades de escala e eficiência</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-primary-400 mt-1">•</span>
