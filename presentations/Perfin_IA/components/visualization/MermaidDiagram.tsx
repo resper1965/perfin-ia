@@ -19,13 +19,22 @@ export function MermaidDiagram({
   const containerRef = useRef<HTMLDivElement>(null)
   const [svg, setSvg] = useState<string>('')
   const [error, setError] = useState<string>('')
+  const [isMounted, setIsMounted] = useState(false)
 
   useEffect(() => {
+    setIsMounted(true)
+  }, [])
+
+  useEffect(() => {
+    if (!isMounted) return
+    
     let mounted = true
 
     const renderDiagram = async () => {
       try {
-        // Dynamically import mermaid
+        // Dynamically import mermaid only on client
+        if (typeof window === 'undefined') return
+        
         const mermaid = (await import('mermaid')).default
 
         // Configure mermaid with ness. branding colors
@@ -109,7 +118,26 @@ export function MermaidDiagram({
     return () => {
       mounted = false
     }
-  }, [code, theme])
+  }, [code, theme, isMounted])
+
+  if (!isMounted) {
+    return (
+      <div className={cn('space-y-4', className)}>
+        {title && (
+          <h3 className="text-lg font-medium font-montserrat text-slate-200">
+            {title}
+          </h3>
+        )}
+        <div className="rounded-lg border p-6 overflow-x-auto bg-slate-900/50 border-slate-800">
+          <div className="flex items-center justify-center py-12">
+            <div className="text-slate-400 text-sm">
+              Loading diagram...
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   if (error) {
     return (

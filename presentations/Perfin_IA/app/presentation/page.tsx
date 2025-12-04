@@ -58,6 +58,7 @@ import { NessText } from '@/components/ui/ness-text'
 // Advanced Components
 import { MetricsDashboardRich } from '@/components/advanced/MetricsDashboardRich'
 import { MermaidDiagram } from '@/components/visualization/MermaidDiagram'
+import { ComparisonTableAdvanced } from '@/components/advanced/ComparisonTableAdvanced'
 
 // Professional Components
 import { SlideLayout, ContentContainer } from '@/components/slides/SlideLayout'
@@ -647,6 +648,51 @@ function Slide06_Comparativo() {
 
 // ========== SLIDE 7: OUTROS CASOS DE USO ==========
 function Slide07_OutrosCasosUso() {
+  const useCasesData = [
+    {
+      area: {
+        value: 'Jurídico',
+        icon: FileText,
+        color: 'blue' as const,
+      },
+      useCase: 'Leitura assistida de contratos de PPP/concessão',
+      impact: {
+        value: 'Redução de tempo e risco',
+        icon: Clock,
+        color: 'emerald' as const,
+        subtext: '⏱️ Redução de tempo de análise • 🎯 Diminuição de risco de cláusula perdida',
+      },
+    },
+    {
+      area: {
+        value: 'Backoffice',
+        icon: Server,
+        color: 'purple' as const,
+      },
+      useCase: 'Interpretação de relatórios TOTVS RM',
+      impact: {
+        value: 'Aceleração e precisão',
+        icon: Zap,
+        color: 'emerald' as const,
+        subtext: '⏱️ Aceleração de conciliações • 🛡️ Detecção precoce de erros',
+      },
+    },
+    {
+      area: {
+        value: 'Relação com Investidores',
+        icon: Users,
+        color: 'cyan' as const,
+      },
+      useCase: 'Geração de narrativas a partir de indicadores',
+      impact: {
+        value: 'Eficiência e consistência',
+        icon: BarChart3,
+        color: 'emerald' as const,
+        subtext: '⏱️ Redução de tempo de preparação • 📊 Consistência de storytelling',
+      },
+    },
+  ]
+
   return (
     <SlideLayout
       title="Outros casos de uso em avaliação"
@@ -654,50 +700,15 @@ function Slide07_OutrosCasosUso() {
       variant="default"
     >
       <ContentContainer variant="stack" gap={6}>
-        <div className="overflow-x-auto">
-          <table className="w-full border-collapse">
-            <thead>
-              <tr className="border-b border-neutral-800">
-                <th className="text-left p-4 text-neutral-300 font-medium font-montserrat">Área</th>
-                <th className="text-left p-4 text-neutral-300 font-medium font-montserrat">Caso de Uso</th>
-                <th className="text-left p-4 text-neutral-300 font-medium font-montserrat">Impacto Esperado</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr className="border-b border-neutral-800/50">
-                <td className="p-4 text-neutral-200 font-medium">Jurídico</td>
-                <td className="p-4 text-neutral-300">Leitura assistida de contratos de PPP/concessão</td>
-                <td className="p-4 text-neutral-300">
-                  <div className="space-y-1">
-                    <p>⏱️ Redução de tempo de análise</p>
-                    <p>🎯 Diminuição de risco de cláusula perdida</p>
-                  </div>
-                </td>
-              </tr>
-              <tr className="border-b border-neutral-800/50">
-                <td className="p-4 text-neutral-200 font-medium">Backoffice</td>
-                <td className="p-4 text-neutral-300">Interpretação de relatórios TOTVS RM</td>
-                <td className="p-4 text-neutral-300">
-                  <div className="space-y-1">
-                    <p>⏱️ Aceleração de conciliações</p>
-                    <p>🛡️ Detecção precoce de erros</p>
-                  </div>
-                </td>
-              </tr>
-              <tr>
-                <td className="p-4 text-neutral-200 font-medium">Relação com Investidores</td>
-                <td className="p-4 text-neutral-300">Geração de narrativas a partir de indicadores</td>
-                <td className="p-4 text-neutral-300">
-                  <div className="space-y-1">
-                    <p>⏱️ Redução de tempo de preparação</p>
-                    <p>📊 Consistência de storytelling</p>
-                  </div>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-        <p className="text-sm text-neutral-500 italic">
+        <ComparisonTableAdvanced
+          columns={[
+            { header: 'Área', key: 'area', width: 'w-1/4' },
+            { header: 'Caso de Uso', key: 'useCase', width: 'w-1/3' },
+            { header: 'Impacto Esperado', key: 'impact', width: 'w-5/12' },
+          ]}
+          rows={useCasesData}
+        />
+        <p className="text-sm text-slate-500 italic">
           (Nota: Casos em fase de mapeamento. Workshop necessário para priorização.)
         </p>
       </ContentContainer>
