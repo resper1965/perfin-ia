@@ -165,7 +165,7 @@ function Slide01_Titulo() {
           transition={{ delay: 0.3, duration: 0.6 }}
           className="space-y-8"
         >
-          <h1 className="text-3xl md:text-4xl font-medium font-montserrat text-neutral-50 leading-tight">
+          <h1 className="text-4xl md:text-5xl font-medium font-montserrat text-neutral-50 leading-tight">
             IA Aplicada à Perfin
           </h1>
 
