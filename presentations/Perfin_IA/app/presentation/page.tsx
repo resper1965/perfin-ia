@@ -456,6 +456,31 @@ function Slide04_Lista18Controles() {
 
 // ========== SLIDE 5: AGENTES INTELIGENTES ==========
 function Slide05_AgentesInteligentes() {
+  const agentDiagram = `graph TB
+    A[Usuário] --> B[Agente Inteligente]
+    B --> C[LLM]
+    B --> D[(Base de<br/>Conhecimento)]
+    B --> E[Ferramentas]
+    E --> F[ERP/TOTVS]
+    E --> G[Planilhas]
+    E --> H[APIs Internas]
+    C --> I[Raciocínio]
+    D --> I
+    E --> I
+    I --> J[Ação/Output]
+    J --> A
+    
+    style A fill:#1e293b,stroke:#00ade8,stroke-width:2px,color:#e2e8f0
+    style B fill:#0f172a,stroke:#00ade8,stroke-width:3px,color:#e2e8f0
+    style C fill:#1e293b,stroke:#00ade8,stroke-width:2px,color:#e2e8f0
+    style D fill:#1e293b,stroke:#00ade8,stroke-width:2px,color:#e2e8f0
+    style E fill:#1e293b,stroke:#00ade8,stroke-width:2px,color:#e2e8f0
+    style F fill:#334155,stroke:#64748b,stroke-width:1px,color:#e2e8f0
+    style G fill:#334155,stroke:#64748b,stroke-width:1px,color:#e2e8f0
+    style H fill:#334155,stroke:#64748b,stroke-width:1px,color:#e2e8f0
+    style I fill:#1e293b,stroke:#a855f7,stroke-width:2px,color:#e2e8f0
+    style J fill:#1e293b,stroke:#10b981,stroke-width:2px,color:#e2e8f0`
+
   return (
     <SlideLayout
       title="Agentes Inteligentes: Executam, não apenas respondem"
@@ -464,16 +489,23 @@ function Slide05_AgentesInteligentes() {
     >
       <ContentContainer variant="stack" gap={6}>
         <div className="space-y-6">
+          {/* Mermaid Diagram */}
+          <MermaidDiagram
+            code={agentDiagram}
+            title="Arquitetura de Agentes Inteligentes"
+            theme="dark"
+          />
+
           <div>
             <h3 className="text-lg font-medium font-montserrat text-primary-400 mb-4">Combinação:</h3>
-            <p className="text-lg text-neutral-300 mb-4">
+            <p className="text-lg text-slate-300 mb-4">
               LLM + Base de Conhecimento + Ferramentas (ERPs, planilhas, APIs)
             </p>
           </div>
 
           <div>
             <h3 className="text-lg font-medium font-montserrat text-primary-400 mb-4">Capacidades:</h3>
-            <ul className="space-y-3 text-lg text-neutral-300 leading-relaxed">
+            <ul className="space-y-3 text-lg text-slate-300 leading-relaxed">
               <li className="flex items-start gap-3">
                 <CheckCircle2 className="text-green-400 mt-1 shrink-0" size={20} />
                 <span>Buscar e cruzar informações entre sistemas</span>
