@@ -1,5 +1,5 @@
 /**
- * DADOS PARA APRESENTAÇÃO - Perfin IA
+ * DADOS PARA APRESENTAÇÃO - ness.
  * 
  * Este arquivo contém a estrutura de dados para a apresentação.
  * Preencha os dados abaixo com as informações da sua apresentação.
@@ -7,10 +7,12 @@
 
 // ===== METADADOS DA APRESENTAÇÃO =====
 export const presentationMetadata = {
-    cliente: "Perfin IA",
+    cliente: "Perfin",
+    empresa: "Perfin",
     data: new Date().toLocaleDateString('pt-BR'),
-    totalSlides: 26,
-    framework: "Apresentação Perfin IA",
+    totalSlides: 10,
+    framework: "IA Aplicada à Perfin",
+    tema: "Inteligência Artificial",
 }
 
 // ===== TAREFAS / PLANO DE AÇÃO =====

@@ -1,7 +1,7 @@
 /**
- * TEMPLATE DE APRESENTAÇÃO PROFISSIONAL
+ * APRESENTAÇÃO DE IA - ness.
  * Apresentação interativa com design system ness.
- * Marca: Ness (#00ade8)
+ * Marca: ness. (#00ade8)
  * 
  * INSTRUÇÕES:
  * 1. Preencha os dados em lib/presentation-data.ts
@@ -17,7 +17,7 @@ import {
   ChevronLeft,
   ChevronRight,
   LogOut,
-  Shield,
+  Brain,
   Target,
   TrendingUp,
   AlertTriangle,
@@ -31,7 +31,6 @@ import {
   Minimize,
   HelpCircle,
   Palette,
-  Lock,
   FileText,
   Users,
   CheckCircle2,
@@ -43,16 +42,18 @@ import {
   Calendar,
   Eye,
   Zap,
-  Bug,
   Settings,
   HardDrive,
   AlertCircle as AlertCircleIcon,
-  Brain,
   FileBarChart,
   Network,
-  ShieldCheck
+  Sparkles,
+  Cpu,
+  Code,
+  Lock
 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { NessText } from '@/components/ui/ness-text'
 
 // Professional Components
 import { SlideLayout, ContentContainer } from '@/components/slides/SlideLayout'
@@ -62,7 +63,6 @@ import { MetricGrid } from '@/components/slides/MetricGrid'
 import { StatusIndicator, StatusBadge, ProgressStatus } from '@/components/slides/StatusIndicator'
 import { SectionHeader } from '@/components/slides/SectionHeader'
 import { InfoPanel, FeatureList } from '@/components/slides/InfoPanel'
-import { HeroSection } from '@/components/slides/HeroSection'
 
 // Chart Components
 import { CISControlsTable } from '@/components/presentation/cis-controls-table'
@@ -101,59 +101,19 @@ import {
   presentationMetadata
 } from '@/lib/presentation-data'
 
-// Sections
+// Sections - Atualizado para tema de IA
 const slideSections = [
-  { title: 'Introdução', startIndex: 0, endIndex: 3, icon: <Shield className="w-4 h-4" /> },
-  { title: 'Controles CIS', startIndex: 4, endIndex: 9, icon: <Target className="w-4 h-4" /> },
-  { title: 'Vulnerabilidades', startIndex: 10, endIndex: 11, icon: <AlertTriangle className="w-4 h-4" /> },
-  { title: 'Pentests', startIndex: 12, endIndex: 12, icon: <FileSearch className="w-4 h-4" /> },
+  { title: 'Introdução', startIndex: 0, endIndex: 3, icon: <Brain className="w-4 h-4" /> },
+  { title: 'IA e Machine Learning', startIndex: 4, endIndex: 9, icon: <Sparkles className="w-4 h-4" /> },
+  { title: 'Aplicações', startIndex: 10, endIndex: 11, icon: <Cpu className="w-4 h-4" /> },
+  { title: 'Projetos', startIndex: 12, endIndex: 12, icon: <Code className="w-4 h-4" /> },
   { title: 'Tarefas', startIndex: 13, endIndex: 15, icon: <CheckSquare className="w-4 h-4" /> },
   { title: 'Pontos de Atenção', startIndex: 16, endIndex: 17, icon: <AlertCircle className="w-4 h-4" /> },
-  { title: 'n.secops', startIndex: 18, endIndex: 25, icon: <ShieldCheck className="w-4 h-4" /> },
+  { title: 'ness.', startIndex: 18, endIndex: 25, icon: <Brain className="w-4 h-4" /> },
 ]
 
-// Helper para renderizar n.secops e ness. com ponto colorido
-function NsecopsText() {
-  return (
-    <>
-      <span>n</span>
-      <span className="text-[#00ade8]">.</span>
-      <span>secops</span>
-    </>
-  )
-}
-
-function NessText() {
-  return (
-    <>
-      <span>ness</span>
-      <span className="text-[#00ade8]">.</span>
-    </>
-  )
-}
-
-function TrustnessText() {
-  return (
-    <>
-      <span>trustness</span>
-      <span className="text-[#00ade8]">.</span>
-    </>
-  )
-}
-
-// ========== SLIDE 1: HERO SECTION COM ROBÔ 3D ==========
-function Slide01_HeroSection() {
-  return (
-    <HeroSection
-      title="trustness."
-      subtitle="Security by Design"
-      showRobot={true}
-    />
-  )
-}
-
-// ========== SLIDE 1 ALT: LOGO TRUSTNESS (Alternativa sem robô) ==========
-function Slide01_LogoTrustness() {
+// ========== SLIDE 1 ALT: LOGO NESS (Alternativa sem robô) ==========
+function Slide01_LogoNess() {
   return (
     <div className="flex items-center justify-center h-screen bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950">
       <motion.div
@@ -170,10 +130,9 @@ function Slide01_LogoTrustness() {
           <div className="text-center space-y-6">
             <div className="space-y-2">
               <h1 className="text-7xl md:text-8xl font-montserrat font-medium tracking-tight">
-                <span className="text-neutral-50">trustness</span>
-                <span className="text-[#00ade8]">.</span>
+                <NessText variant="dark" size="7xl" />
               </h1>
-              <p className="text-xl text-neutral-400">Security by Design</p>
+              <p className="text-xl text-neutral-400">Inteligência Artificial</p>
             </div>
           </div>
         </div>
@@ -182,12 +141,12 @@ function Slide01_LogoTrustness() {
   )
 }
 
-// ========== SLIDE 2: CAPA ==========
-function Slide02_Capa() {
+// ========== SLIDE 1: TÍTULO ==========
+function Slide01_Titulo() {
   return (
     <div className="flex flex-col items-center justify-center h-screen gap-12 px-8 relative overflow-hidden">
       {/* Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-neutral-950 via-neutral-900 to-neutral-950" />
+      <div className="absolute inset-0 bg-black" />
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary-500/10 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
@@ -196,49 +155,23 @@ function Slide02_Capa() {
       {/* Content */}
       <div className="z-10 space-y-12 text-center max-w-5xl">
         <motion.div
-          initial={{ scale: 0, rotate: -180 }}
-          animate={{ scale: 1, rotate: 0 }}
-          transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
-          className="flex justify-center"
-        >
-          <div className="p-8 bg-gradient-to-br from-primary-500/20 to-primary-600/10 rounded-3xl border-2 border-primary-500/30 shadow-[0_0_50px_rgba(0,173,232,0.3)]">
-            <Shield className="w-24 h-24 text-primary-400" strokeWidth={1.5} />
-          </div>
-        </motion.div>
-
-        <motion.div
           initial={{ y: 30, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.6 }}
           className="space-y-8"
         >
-          <h1 className="text-6xl md:text-7xl font-bold text-neutral-50 leading-tight">
-            {presentationMetadata.framework || 'Título da Apresentação'}
+          <h1 className="text-6xl md:text-7xl font-medium font-montserrat text-neutral-50 leading-tight">
+            IA Aplicada à Perfin
           </h1>
 
-          <h2 className="text-3xl md:text-4xl text-primary-400 font-semibold">
-            {presentationMetadata.cliente || 'Nome do Cliente'}
-          </h2>
-        </motion.div>
+          <p className="text-2xl md:text-3xl text-neutral-300 font-light leading-relaxed max-w-4xl mx-auto">
+            Acelerando análise de investimentos, jurídico e backoffice com segurança regulatória
+          </p>
 
-        <motion.div
-          initial={{ opacity: 0, scaleX: 0 }}
-          animate={{ opacity: 1, scaleX: 1 }}
-          transition={{ delay: 0.5, duration: 0.6 }}
-          className="mt-8"
-        >
-          <div className="h-1 w-48 bg-gradient-to-r from-transparent via-primary-500 to-transparent mx-auto rounded-full" />
-        </motion.div>
-
-        <motion.div
-          initial={{ y: 20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.6, duration: 0.6 }}
-          className="flex items-center justify-center gap-8 text-neutral-400 text-xl"
-        >
-          <div className="flex items-center gap-3 px-6 py-3 rounded-full bg-neutral-800/50 border border-neutral-700/50">
-            <Clock className="w-5 h-5 text-primary-400" />
-            <span>{presentationMetadata.data || 'Data da Apresentação'}</span>
+          <div className="pt-8">
+            <p className="text-xl text-primary-400 font-medium">
+              NESS Processos e Tecnologia
+            </p>
           </div>
         </motion.div>
       </div>
@@ -246,72 +179,171 @@ function Slide02_Capa() {
   )
 }
 
-// ========== SLIDE 3: CONTEXTUALIZAÇÃO CIS ==========
-function Slide03_ContextualizacaoCIS() {
+// ========== SLIDE 2: PERFIN HOJE - O DESAFIO DE ESCALA ==========
+function Slide02_PerfinHoje() {
   return (
     <SlideLayout
-      title={presentationMetadata.framework || "Framework Utilizado"}
-      subtitle="Contexto e Explicação"
-      icon={Award}
+      title="Perfin hoje: O desafio de escala"
+      icon={TrendingUp}
       variant="default"
     >
       <ContentContainer variant="stack" gap={6}>
-        <InfoPanel variant="glassmorphic" status="info">
-          <p className="text-lg leading-relaxed">
-            {/* Personalize este texto conforme necessário */}
-            Esta apresentação utiliza um framework estruturado para avaliação e gestão.
-            Ajuste este conteúdo conforme o contexto da sua apresentação.
-          </p>
-        </InfoPanel>
+        <div className="space-y-6">
+          <div>
+            <h3 className="text-2xl font-medium font-montserrat text-primary-400 mb-4">Complexidade e diversificação crescentes:</h3>
+            <ul className="space-y-3 text-lg text-neutral-300 leading-relaxed">
+              <li className="flex items-start gap-3">
+                <span className="text-primary-400 mt-1">•</span>
+                <span>Portfólio diversificado em infraestrutura e equity</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary-400 mt-1">•</span>
+                <span>Múltiplas verticais: transmissão, rodovias, saneamento, geração de energia, ações</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary-400 mt-1">•</span>
+                <span>Due diligences técnicos, jurídicos e financeiros em frentes simultâneas</span>
+              </li>
+            </ul>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <DataCard
-            title="IG1"
-            value="Básico"
-            subtitle="Higiene cibernética essencial"
-            icon={Server}
-            status="neutral"
-          >
-            <p className="text-sm text-neutral-400 mt-3">
-              Para organizações com recursos limitados e infraestrutura simples
-            </p>
-          </DataCard>
+          <div className="pt-4">
+            <h3 className="text-2xl font-medium font-montserrat text-primary-400 mb-4">Áreas com pressão identificadas:</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="p-4 bg-neutral-900/50 rounded-lg border border-neutral-800">
+                <p className="font-medium text-neutral-200 mb-2">Jurídico:</p>
+                <p className="text-sm text-neutral-400">Análise de contratos de concessão, PPPs, acordos de acionistas</p>
+              </div>
+              <div className="p-4 bg-neutral-900/50 rounded-lg border border-neutral-800">
+                <p className="font-medium text-neutral-200 mb-2">Backoffice:</p>
+                <p className="text-sm text-neutral-400">Interpretação de relatórios TOTVS RM, conciliações, auditorias</p>
+              </div>
+              <div className="p-4 bg-neutral-900/50 rounded-lg border border-neutral-800">
+                <p className="font-medium text-neutral-200 mb-2">Investimentos em Ações:</p>
+                <p className="text-sm text-neutral-400">Síntese de balanços, releases, comparações setoriais</p>
+              </div>
+              <div className="p-4 bg-neutral-900/50 rounded-lg border border-neutral-800">
+                <p className="font-medium text-neutral-200 mb-2">Relação com Investidores:</p>
+                <p className="text-sm text-neutral-400">Construção de narrativas e apresentações</p>
+              </div>
+            </div>
+          </div>
 
-          <DataCard
-            title="IG2"
-            value="Avançado"
-            subtitle="Infraestrutura complexa"
-            icon={Shield}
-            status="success"
-          >
-            <p className="text-sm text-neutral-200 mt-3 font-semibold">
-              ✓ Adequado para {presentationMetadata.cliente || 'a organização'}
+          <InfoPanel variant="highlight" status="warning">
+            <p className="text-lg">
+              <strong>Tensão:</strong> Equipes especializadas vs. volume crescente de informação não-estruturada
             </p>
-            <p className="text-sm text-neutral-400 mt-1">
-              Ajuste esta descrição conforme necessário
-            </p>
-          </DataCard>
-
-          <DataCard
-            title="IG3"
-            value="Máximo"
-            subtitle="Alta criticidade"
-            icon={Lock}
-            status="neutral"
-          >
-            <p className="text-sm text-neutral-400 mt-3">
-              Para infraestrutura crítica ou alvos de ameaças avançadas
-            </p>
-          </DataCard>
+          </InfoPanel>
         </div>
+      </ContentContainer>
+    </SlideLayout>
+  )
+}
 
-        <InfoPanel variant="highlight" status="success">
-          <p className="text-lg">
-            {/* Personalize este texto conforme necessário */}
-            <strong>Contexto:</strong> Ajuste esta descrição para explicar o contexto e justificativa
-            da abordagem utilizada na apresentação.
+// ========== SLIDE 3: O QUE IA PODE FAZER ==========
+function Slide03_OQueIAPodeFazer() {
+  return (
+    <SlideLayout
+      title="O que IA pode fazer (e o que não pode)"
+      icon={Brain}
+      variant="default"
+    >
+      <ContentContainer variant="stack" gap={6}>
+        <div className="space-y-6">
+          <div>
+            <h3 className="text-2xl font-medium font-montserrat text-primary-400 mb-4">LLM = "Analista generalista" de processamento de texto:</h3>
+            <ul className="space-y-3 text-lg text-neutral-300 leading-relaxed">
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="text-green-400 mt-1 shrink-0" size={20} />
+                <span>Excelente para ler, resumir, comparar, estruturar informações complexas</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="text-green-400 mt-1 shrink-0" size={20} />
+                <span>Processa documentos jurídicos, financeiros, técnicos em segundos</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="pt-4">
+            <h3 className="text-2xl font-medium font-montserrat text-red-400 mb-4">Limitação crítica: Alucinação</h3>
+            <ul className="space-y-3 text-lg text-neutral-300 leading-relaxed">
+              <li className="flex items-start gap-3">
+                <AlertTriangle className="text-red-400 mt-1 shrink-0" size={20} />
+                <span>Quando faltam dados, o modelo "completa" com informação inventada</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <AlertTriangle className="text-red-400 mt-1 shrink-0" size={20} />
+                <span>Risco alto em contextos regulados (CVM, LGPD, sigilo de investimentos)</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <AlertTriangle className="text-red-400 mt-1 shrink-0" size={20} />
+                <span>Exemplos perigosos: números financeiros errados, cláusulas contratuais inexistentes</span>
+              </li>
+            </ul>
+          </div>
+
+          <InfoPanel variant="highlight" status="warning">
+            <p className="text-lg">
+              <strong>Conclusão:</strong> LLM "puro" é inadequado para gestoras. Precisa de controles.
+            </p>
+          </InfoPanel>
+        </div>
+      </ContentContainer>
+    </SlideLayout>
+  )
+}
+
+// ========== SLIDE 4: BASE DE CONHECIMENTO ==========
+function Slide04_BaseConhecimento() {
+  return (
+    <SlideLayout
+      title="Nossa abordagem: Base de Conhecimento Inteligente"
+      icon={HardDrive}
+      variant="default"
+    >
+      <ContentContainer variant="stack" gap={6}>
+        <div className="space-y-6">
+          <div>
+            <h3 className="text-2xl font-medium font-montserrat text-primary-400 mb-4">Repositório privado e conectado aos sistemas da Perfin:</h3>
+            <ul className="space-y-3 text-lg text-neutral-300 leading-relaxed">
+              <li className="flex items-start gap-3">
+                <span className="text-primary-400 mt-1">•</span>
+                <span>Documentos reais: contratos, DDs, balanços, releases, regulamentos CVM</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary-400 mt-1">•</span>
+                <span>IA consulta ESSA base antes de responder (não inventa)</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary-400 mt-1">•</span>
+                <span>Respostas ancoradas em fatos, com rastreabilidade por documento</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="p-4 bg-neutral-900/50 rounded-lg border border-neutral-800">
+              <h4 className="font-medium text-neutral-200 mb-3">Benefícios:</h4>
+              <ul className="space-y-2 text-sm text-neutral-400">
+                <li>✓ Redução drástica de alucinação</li>
+                <li>✓ Precisão jurídica, financeira e operacional</li>
+                <li>✓ Compliance: trilha de auditoria</li>
+              </ul>
+            </div>
+            <div className="p-4 bg-neutral-900/50 rounded-lg border border-neutral-800">
+              <h4 className="font-medium text-neutral-200 mb-3">Integração potencial:</h4>
+              <ul className="space-y-2 text-sm text-neutral-400">
+                <li>• SharePoint / Google Drive / Sistema de RI</li>
+                <li>• TOTVS RM (relatórios estruturados)</li>
+                <li>• APIs de sistemas internos</li>
+              </ul>
+            </div>
+          </div>
+
+          <p className="text-sm text-neutral-500 italic pt-4">
+            (Rodapé: Implementado com RAG - Retrieval Augmented Generation)
           </p>
-        </InfoPanel>
+        </div>
       </ContentContainer>
     </SlideLayout>
   )
@@ -357,9 +389,134 @@ function Slide04_Lista18Controles() {
   )
 }
 
-// ========== SLIDE 5: DIVISOR EVOLUÇÃO ==========
-function Slide05_DivisorEvolucao() {
-  return <SectionDivider title="Evolução dos Controles" subtitle="Status Atual e Análise Comparativa" />
+// ========== SLIDE 5: AGENTES INTELIGENTES ==========
+function Slide05_AgentesInteligentes() {
+  return (
+    <SlideLayout
+      title="Agentes Inteligentes: Executam, não apenas respondem"
+      icon={Zap}
+      variant="default"
+    >
+      <ContentContainer variant="stack" gap={6}>
+        <div className="space-y-6">
+          <div>
+            <h3 className="text-2xl font-medium font-montserrat text-primary-400 mb-4">Combinação:</h3>
+            <p className="text-lg text-neutral-300 mb-4">
+              LLM + Base de Conhecimento + Ferramentas (ERPs, planilhas, APIs)
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-2xl font-medium font-montserrat text-primary-400 mb-4">Capacidades:</h3>
+            <ul className="space-y-3 text-lg text-neutral-300 leading-relaxed">
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="text-green-400 mt-1 shrink-0" size={20} />
+                <span>Buscar e cruzar informações entre sistemas</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="text-green-400 mt-1 shrink-0" size={20} />
+                <span>Executar análises repetitivas</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <CheckCircle2 className="text-green-400 mt-1 shrink-0" size={20} />
+                <span>Gerar outputs estruturados (relatórios, comparações, alertas)</span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 pt-4">
+            <div className="p-4 bg-red-900/20 rounded-lg border border-red-800/30">
+              <p className="text-red-400 font-medium mb-2">❌ Chatbot que responde perguntas</p>
+            </div>
+            <div className="p-4 bg-green-900/20 rounded-lg border border-green-800/30">
+              <p className="text-green-400 font-medium mb-2">✅ Agente que executa tarefas de ponta a ponta</p>
+            </div>
+          </div>
+
+          <InfoPanel variant="highlight" status="info">
+            <p className="text-lg">
+              <strong>Exemplo conceitual:</strong> "Agente Due Diligence: Extrai cláusulas de reajuste de contratos de transmissão, cruza com RAP ANEEL, e gera tabela comparativa"
+            </p>
+          </InfoPanel>
+        </div>
+      </ContentContainer>
+    </SlideLayout>
+  )
+}
+
+// ========== SLIDE 6: DEEP DIVE INVESTIMENTOS ==========
+function Slide06_DeepDiveInvestimentos() {
+  return (
+    <SlideLayout
+      title="Deep Dive: Investimentos em Ações"
+      icon={BarChart3}
+      variant="default"
+    >
+      <ContentContainer variant="stack" gap={6}>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="space-y-4">
+            <h3 className="text-xl font-medium font-montserrat text-primary-400">Workflow Atual (estimado):</h3>
+            <ul className="space-y-2 text-sm text-neutral-300 leading-relaxed">
+              <li className="flex items-start gap-2">
+                <span className="text-primary-400 mt-1">1.</span>
+                <span>Analista baixa balanços trimestrais de múltiplas empresas do setor</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary-400 mt-1">2.</span>
+                <span>Lê centenas de páginas para extrair: margem EBITDA, CAPEX, guidance, riscos</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary-400 mt-1">3.</span>
+                <span>Monta planilha comparativa manual</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-primary-400 mt-1">4.</span>
+                <span>Redige síntese para comitê de investimento</span>
+              </li>
+            </ul>
+            <div className="p-3 bg-neutral-900/50 rounded border border-neutral-800 mt-4">
+              <p className="text-sm text-neutral-400">
+                <strong className="text-neutral-200">Tempo:</strong> Dias de trabalho analítico por comparação setorial
+              </p>
+            </div>
+          </div>
+
+          <div className="space-y-4">
+            <h3 className="text-xl font-medium font-montserrat text-green-400">Workflow com IA (proposto):</h3>
+            <ul className="space-y-2 text-sm text-neutral-300 leading-relaxed">
+              <li className="flex items-start gap-2">
+                <CheckCircle2 className="text-green-400 mt-1 shrink-0" size={16} />
+                <span>Agente ingere os balanços da Base de Conhecimento</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle2 className="text-green-400 mt-1 shrink-0" size={16} />
+                <span>Extrai métricas-chave pré-definidas em formato estruturado</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle2 className="text-green-400 mt-1 shrink-0" size={16} />
+                <span>Gera tabela comparativa automaticamente</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <CheckCircle2 className="text-green-400 mt-1 shrink-0" size={16} />
+                <span>Analista valida, ajusta e complementa análise qualitativa</span>
+              </li>
+            </ul>
+            <div className="p-3 bg-green-900/20 rounded border border-green-800/30 mt-4">
+              <p className="text-sm text-green-300">
+                <strong className="text-green-200">Tempo:</strong> Horas, com foco em interpretação estratégica
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <InfoPanel variant="highlight" status="success">
+          <p className="text-lg">
+            <strong>Ganho:</strong> Analista foca em insights, não em extração manual
+          </p>
+        </InfoPanel>
+      </ContentContainer>
+    </SlideLayout>
+  )
 }
 
 // ========== SLIDE 6: GRÁFICO COMPARATIVO ==========
@@ -387,6 +544,66 @@ function Slide06_Comparativo() {
         status="success"
         height="lg"
       />
+    </SlideLayout>
+  )
+}
+
+// ========== SLIDE 7: OUTROS CASOS DE USO ==========
+function Slide07_OutrosCasosUso() {
+  return (
+    <SlideLayout
+      title="Outros casos de uso em avaliação"
+      icon={FileSearch}
+      variant="default"
+    >
+      <ContentContainer variant="stack" gap={6}>
+        <div className="overflow-x-auto">
+          <table className="w-full border-collapse">
+            <thead>
+              <tr className="border-b border-neutral-800">
+                <th className="text-left p-4 text-neutral-300 font-medium font-montserrat">Área</th>
+                <th className="text-left p-4 text-neutral-300 font-medium font-montserrat">Caso de Uso</th>
+                <th className="text-left p-4 text-neutral-300 font-medium font-montserrat">Impacto Esperado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-neutral-800/50">
+                <td className="p-4 text-neutral-200 font-medium">Jurídico</td>
+                <td className="p-4 text-neutral-300">Leitura assistida de contratos de PPP/concessão</td>
+                <td className="p-4 text-neutral-300">
+                  <div className="space-y-1">
+                    <p>⏱️ Redução de tempo de análise</p>
+                    <p>🎯 Diminuição de risco de cláusula perdida</p>
+                  </div>
+                </td>
+              </tr>
+              <tr className="border-b border-neutral-800/50">
+                <td className="p-4 text-neutral-200 font-medium">Backoffice</td>
+                <td className="p-4 text-neutral-300">Interpretação de relatórios TOTVS RM</td>
+                <td className="p-4 text-neutral-300">
+                  <div className="space-y-1">
+                    <p>⏱️ Aceleração de conciliações</p>
+                    <p>🛡️ Detecção precoce de erros</p>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td className="p-4 text-neutral-200 font-medium">Relação com Investidores</td>
+                <td className="p-4 text-neutral-300">Geração de narrativas a partir de indicadores</td>
+                <td className="p-4 text-neutral-300">
+                  <div className="space-y-1">
+                    <p>⏱️ Redução de tempo de preparação</p>
+                    <p>📊 Consistência de storytelling</p>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="text-sm text-neutral-500 italic">
+          (Nota: Casos em fase de mapeamento. Workshop necessário para priorização.)
+        </p>
+      </ContentContainer>
     </SlideLayout>
   )
 }
@@ -476,6 +693,83 @@ function Slide07_EvolucaoTemporal() {
   )
 }
 
+// ========== SLIDE 8: SEGURANÇA E COMPLIANCE ==========
+function Slide08_SegurancaCompliance() {
+  return (
+    <SlideLayout
+      title="Segurança, Compliance e Governança"
+      icon={Lock}
+      variant="default"
+    >
+      <ContentContainer variant="stack" gap={6}>
+        <div className="space-y-6">
+          <div>
+            <h3 className="text-2xl font-medium font-montserrat text-red-400 mb-4">Riscos inerentes:</h3>
+            <ul className="space-y-3 text-lg text-neutral-300 leading-relaxed">
+              <li className="flex items-start gap-3">
+                <AlertTriangle className="text-red-400 mt-1 shrink-0" size={20} />
+                <span>Alucinação residual em contextos não documentados</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <AlertTriangle className="text-red-400 mt-1 shrink-0" size={20} />
+                <span>Exposição de dados sensíveis (informações privilegiadas, dados de cotistas)</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <AlertTriangle className="text-red-400 mt-1 shrink-0" size={20} />
+                <span>Quebra de chinese wall entre fundos (equity vs. infra)</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-2xl font-medium font-montserrat text-primary-400 mb-4">Camadas de mitigação:</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="p-4 bg-neutral-900/50 rounded-lg border border-neutral-800">
+                <p className="font-medium text-neutral-200 mb-2">Base de Conhecimento Privada:</p>
+                <p className="text-sm text-neutral-400">IA nunca consulta internet/fontes externas</p>
+              </div>
+              <div className="p-4 bg-neutral-900/50 rounded-lg border border-neutral-800">
+                <p className="font-medium text-neutral-200 mb-2">Controles de Acesso:</p>
+                <p className="text-sm text-neutral-400">Segregação por fundo/área (respeitando chinese wall)</p>
+              </div>
+              <div className="p-4 bg-neutral-900/50 rounded-lg border border-neutral-800">
+                <p className="font-medium text-neutral-200 mb-2">Trilha de Auditoria:</p>
+                <p className="text-sm text-neutral-400">Rastreabilidade total (quem perguntou, qual documento foi usado)</p>
+              </div>
+              <div className="p-4 bg-neutral-900/50 rounded-lg border border-neutral-800">
+                <p className="font-medium text-neutral-200 mb-2">LGPD e CVM:</p>
+                <p className="text-sm text-neutral-400">Ambiente on-premise ou cloud privado, sem exposição a terceiros</p>
+              </div>
+              <div className="p-4 bg-neutral-900/50 rounded-lg border border-neutral-800 md:col-span-2">
+                <p className="font-medium text-neutral-200 mb-2">Validação Humana:</p>
+                <p className="text-sm text-neutral-400">IA como assistente, não tomador de decisão</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-2xl font-medium font-montserrat text-primary-400 mb-4">Governança proposta:</h3>
+            <ul className="space-y-2 text-lg text-neutral-300 leading-relaxed">
+              <li className="flex items-start gap-3">
+                <span className="text-primary-400 mt-1">•</span>
+                <span>Política interna de uso de IA</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary-400 mt-1">•</span>
+                <span>Comitê de aprovação de novos agentes</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary-400 mt-1">•</span>
+                <span>Revisão periódica de acurácia e riscos</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </ContentContainer>
+    </SlideLayout>
+  )
+}
+
 // ========== SLIDE 8: CONTROLES TRABALHADOS ==========
 function Slide08_ControlesTrabalhados() {
   const trabalhados = [
@@ -483,9 +777,9 @@ function Slide08_ControlesTrabalhados() {
     { id: '3', name: '3 - Proteção de dados', icon: Lock },
     { id: '4', name: '4 - Configuração segura de ativos e softwares', icon: Server },
     { id: '5', name: '5 - Estabelecer e Manter um inventário de contas', icon: Users },
-    { id: '6', name: '6 - Gerenciamento de controle de acessos', icon: Shield },
+    { id: '6', name: '6 - Gerenciamento de controle de acessos', icon: Brain },
     { id: '8', name: '8 - Gerenciamento de log de auditoria', icon: FileText },
-    { id: '9', name: '9 - Proteções de e-mail e navegadores da Web', icon: Shield },
+    { id: '9', name: '9 - Proteções de e-mail e navegadores da Web', icon: Brain },
     { id: '13', name: '13 - Monitoramento e proteção de rede', icon: Activity },
   ]
 
@@ -532,6 +826,168 @@ function Slide08_ControlesTrabalhados() {
           status="success"
           height="sm"
         />
+      </ContentContainer>
+    </SlideLayout>
+  )
+}
+
+// ========== SLIDE 9: JORNADA ==========
+function Slide09_Jornada() {
+  return (
+    <SlideLayout
+      title="Jornada (proposta inicial para discussão)"
+      icon={Map}
+      variant="default"
+    >
+      <ContentContainer variant="stack" gap={6}>
+        <div className="space-y-6">
+          <div>
+            <h3 className="text-2xl font-medium font-montserrat text-primary-400 mb-4">Fase 1 – Descoberta e Prova de Valor</h3>
+            <ul className="space-y-2 text-lg text-neutral-300 leading-relaxed">
+              <li className="flex items-start gap-3">
+                <span className="text-primary-400 mt-1">•</span>
+                <span>Workshop com áreas-chave (Jurídico, Investimentos, Backoffice, RI)</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary-400 mt-1">•</span>
+                <span>Mapeamento de casos de uso prioritários</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary-400 mt-1">•</span>
+                <span>Configuração inicial da Base de Conhecimento com documentos reais</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary-400 mt-1">•</span>
+                <span>Piloto em ambiente controlado (áreas selecionadas)</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary-400 mt-1">•</span>
+                <span>Avaliação de impacto: tempo economizado, qualidade, aceitação do time</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-2xl font-medium font-montserrat text-primary-400 mb-4">Fase 2 – Integração Operacional</h3>
+            <ul className="space-y-2 text-lg text-neutral-300 leading-relaxed">
+              <li className="flex items-start gap-3">
+                <span className="text-primary-400 mt-1">•</span>
+                <span>Conexão com sistemas existentes (TOTVS RM, repositórios de documentos)</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary-400 mt-1">•</span>
+                <span>Implantação de agentes em rotinas selecionadas</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary-400 mt-1">•</span>
+                <span>Treinamento de usuários e ajustes finos</span>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-2xl font-medium font-montserrat text-primary-400 mb-4">Fase 3 – Plataforma de IA da Perfin</h3>
+            <ul className="space-y-2 text-lg text-neutral-300 leading-relaxed">
+              <li className="flex items-start gap-3">
+                <span className="text-primary-400 mt-1">•</span>
+                <span>Base de Conhecimento como ativo estratégico (alimentado continuamente)</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary-400 mt-1">•</span>
+                <span>Agentes especializados por área de negócio</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary-400 mt-1">•</span>
+                <span>Governança, monitoramento e expansão gradual</span>
+              </li>
+            </ul>
+          </div>
+
+          <p className="text-sm text-neutral-500 italic pt-4">
+            (Timeframes e escopo detalhado a definir após workshop)
+          </p>
+        </div>
+      </ContentContainer>
+    </SlideLayout>
+  )
+}
+
+// ========== SLIDE 10: PRÓXIMOS PASSOS ==========
+function Slide10_ProximosPassos() {
+  return (
+    <SlideLayout
+      title="Próximos Passos"
+      icon={Target}
+      variant="default"
+    >
+      <ContentContainer variant="stack" gap={6}>
+        <div className="space-y-6">
+          <div>
+            <h3 className="text-2xl font-medium font-montserrat text-primary-400 mb-4">Nossa proposta:</h3>
+            
+            <div className="space-y-4">
+              <div className="p-6 bg-neutral-900/50 rounded-lg border border-neutral-800">
+                <h4 className="text-xl font-medium font-montserrat text-neutral-200 mb-3">1. Workshop de Descoberta</h4>
+                <ul className="space-y-2 text-lg text-neutral-300 leading-relaxed">
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary-400 mt-1">•</span>
+                    <span><strong>Participantes:</strong> Lideranças de Jurídico, Investimentos, Backoffice, RI</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary-400 mt-1">•</span>
+                    <span><strong>Objetivo:</strong> Mapear dores específicas, volume de documentos, workflows atuais</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary-400 mt-1">•</span>
+                    <span><strong>Output:</strong> Priorização de casos de uso para piloto</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="p-6 bg-neutral-900/50 rounded-lg border border-neutral-800">
+                <h4 className="text-xl font-medium font-montserrat text-neutral-200 mb-3">2. Apresentação de Arquitetura Técnica</h4>
+                <ul className="space-y-2 text-lg text-neutral-300 leading-relaxed">
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary-400 mt-1">•</span>
+                    <span>Proposta detalhada de integração com sistemas Perfin</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary-400 mt-1">•</span>
+                    <span>Plano de segurança e compliance</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-primary-400 mt-1">•</span>
+                    <span>Cronograma e entregáveis da Fase 1</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div className="pt-4">
+            <h3 className="text-2xl font-medium font-montserrat text-primary-400 mb-4">Por que NESS:</h3>
+            <ul className="space-y-3 text-lg text-neutral-300 leading-relaxed">
+              <li className="flex items-start gap-3">
+                <span className="text-primary-400 mt-1">•</span>
+                <span><strong>Esper Nunes:</strong> CISO, 34 anos em cibersegurança, entende riscos regulatórios</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary-400 mt-1">•</span>
+                <span>Experiência em arquiteturas seguras para ambientes críticos</span>
+              </li>
+              <li className="flex items-start gap-3">
+                <span className="text-primary-400 mt-1">•</span>
+                <span>Abordagem consultiva: não vendemos tecnologia, construímos solução sob medida</span>
+              </li>
+            </ul>
+          </div>
+
+          <InfoPanel variant="highlight" status="success">
+            <p className="text-xl text-center font-medium">
+              Vamos agendar o workshop?
+            </p>
+          </InfoPanel>
+        </div>
       </ContentContainer>
     </SlideLayout>
   )
@@ -661,7 +1117,7 @@ function Slide11_DivisorVulnerabilidades() {
 function Slide12_EvolucaoVulnerabilidades() {
   if (totalVulnerabilitiesTrend.length === 0) {
     return (
-      <SlideLayout title="Gestão de Vulnerabilidades" subtitle="Dados não disponíveis" icon={Shield} variant="default">
+      <SlideLayout title="Gestão de Vulnerabilidades" subtitle="Dados não disponíveis" icon={Brain} variant="default">
         <ContentContainer variant="stack" gap={4}>
           <InfoPanel variant="highlight" status="info">
             <p>Preencha os dados de vulnerabilidades em <code>lib/presentation-data.ts</code></p>
@@ -723,7 +1179,7 @@ function Slide12_EvolucaoVulnerabilidades() {
     <SlideLayout
       title="Gestão de Vulnerabilidades"
       subtitle="Panorama atual e evolução"
-      icon={Shield}
+      icon={Brain}
       variant="default"
     >
       <ContentContainer variant="stack" gap={4}>
@@ -968,7 +1424,7 @@ function Slide15_Tarefas() {
                         </div>
                       )}
                     </div>
-                    <h3 className="text-xl font-semibold text-neutral-50">
+                    <h3 className="text-xl font-semibold font-montserrat text-neutral-50">
                       {selectedTarefa.titulo}
                     </h3>
                   </div>
@@ -1012,11 +1468,7 @@ function Slide15_Tarefas() {
                       </div>
                     )}
 
-                    {/* Controle relacionado */}
-                    <div>
-                      <span className="text-sm font-semibold text-neutral-300">Controle CIS Relacionado: </span>
-                      <span className="text-sm text-primary-400">CIS {selectedTarefa.controleRelacionado}</span>
-                    </div>
+                    {/* Controle relacionado - removido pois não é mais relevante para apresentação de IA */}
                   </div>
                 </div>
               </div>
@@ -1109,8 +1561,8 @@ function Slide18_DivisorNsecops() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <h1 className="text-6xl md:text-7xl font-light text-slate-100 tracking-tight">
-            <NsecopsText />
+          <h1 className="text-6xl md:text-7xl font-light font-montserrat text-slate-100 tracking-tight">
+            <NessText variant="dark" size="7xl" />
           </h1>
         </motion.div>
 
@@ -1230,7 +1682,7 @@ function Slide22_EDR_Vulnerabilidades() {
     <SlideLayout
       title="EDR e Gestão de Vulnerabilidades"
       subtitle="Proteção de endpoints e varredura contínua"
-      icon={Shield}
+      icon={Brain}
       variant="default"
     >
       <ContentContainer variant="stack" gap={6}>
@@ -1324,7 +1776,7 @@ function Slide23_Patch_Hardening() {
             title="Hardening"
             value="CIS Benchmarks"
             subtitle="Configuração segura"
-            icon={ShieldCheck}
+            icon={Brain}
             status="success"
           >
             <div className="mt-3 space-y-2 text-sm text-neutral-300">
@@ -1514,7 +1966,7 @@ function Slide26_MockupSOC() {
                 <Eye className="w-5 h-5 text-primary-400" />
               </div>
               <div>
-                <h3 className="text-lg font-semibold text-neutral-50">Security Operations Center</h3>
+                <h3 className="text-lg font-semibold font-montserrat text-neutral-50">Security Operations Center</h3>
                 <p className="text-sm text-neutral-400">{presentationMetadata.cliente || 'Organização'} - Monitoramento 24×7 em tempo real</p>
               </div>
             </div>
@@ -1618,31 +2070,17 @@ export default function ProfessionalPresentation() {
   const router = useRouter()
 
   const slides = [
-    { component: Slide01_HeroSection, notes: 'Hero Section com robô 3D interativo - abertura da apresentação' },
-    { component: Slide02_Capa, notes: `${presentationMetadata.framework || 'Título'} - ${presentationMetadata.cliente || 'Cliente'}` },
-    { component: Slide03_ContextualizacaoCIS, notes: `${presentationMetadata.framework || 'Framework'} - contexto e explicação` },
-    { component: Slide04_Lista18Controles, notes: 'Escopo completo: 18 controles do IG2' },
-    { component: Slide05_DivisorEvolucao, notes: 'Divisor: Evolução dos Controles' },
-    { component: Slide06_Comparativo, notes: `Comparativo ${presentationMetadata.cliente || 'Organização'} vs referência` },
-    { component: Slide07_EvolucaoTemporal, notes: 'Evolução de 15% para 45% em 23 meses' },
-    { component: Slide08_ControlesTrabalhados, notes: '8 controles prioritários com 82% de aderência' },
-    { component: Slide09_RadarMaturidade, notes: 'Radar mostrando maturidade por controle' },
-    { component: Slide10_EvolucaoMaturidade, notes: 'Evolução da maturidade geral ao longo do tempo' },
+    { component: Slide01_Titulo, notes: 'IA Aplicada à Perfin - Título' },
+    { component: Slide02_PerfinHoje, notes: 'Perfin hoje: O desafio de escala' },
+    { component: Slide03_OQueIAPodeFazer, notes: 'O que IA pode fazer (e o que não pode)' },
+    { component: Slide04_BaseConhecimento, notes: 'Base de Conhecimento Inteligente' },
+    { component: Slide05_AgentesInteligentes, notes: 'Agentes Inteligentes: Executam, não apenas respondem' },
+    { component: Slide06_DeepDiveInvestimentos, notes: 'Deep Dive: Investimentos em Ações' },
+    { component: Slide07_OutrosCasosUso, notes: 'Outros casos de uso em avaliação' },
+    { component: Slide08_SegurancaCompliance, notes: 'Segurança, Compliance e Governança' },
+    { component: Slide09_Jornada, notes: 'Jornada (proposta inicial para discussão)' },
+    { component: Slide10_ProximosPassos, notes: 'Próximos Passos' },
     { component: Slide11_DivisorVulnerabilidades, notes: 'Divisor: Gestão de Vulnerabilidades' },
-    { component: Slide12_EvolucaoVulnerabilidades, notes: 'Redução de 47% total e 94% críticas' },
-    { component: Slide13_Pentest, notes: `Pentests em ${pentestSummary.totalApps} aplicações` },
-    { component: Slide14_DivisorTarefas, notes: 'Divisor: Plano de Ação' },
-    { component: Slide15_Tarefas, notes: 'Status das tarefas: concluídas, em andamento e pendentes' },
-    { component: Slide16_DivisorPontosAtencao, notes: 'Divisor: Pontos de Atenção' },
-    { component: Slide17_PontosAtencao, notes: 'Pontos críticos: formalização, governança, LGPD, incidentes' },
-    { component: Slide18_DivisorNsecops, notes: 'n.secops - Segurança gerenciada 24×7' },
-    { component: Slide20_DivisorServicosNsecops, notes: 'Divisor: Serviços Principais do n.secops' },
-    { component: Slide21_SOC_SIEM, notes: 'SOC 24×7 e SIEM - Monitoramento e centralização de logs' },
-    { component: Slide22_EDR_Vulnerabilidades, notes: 'EDR e Gestão de Vulnerabilidades - Proteção de endpoints' },
-    { component: Slide23_Patch_Hardening, notes: 'Patch Management e Hardening - Manutenção e configuração segura' },
-    { component: Slide24_Inventario_Incident, notes: 'Inventário de Ativos e Incident Response' },
-    { component: Slide25_Threat_Relatorios, notes: 'Threat Intelligence e Relatórios Executivos' },
-    { component: Slide26_MockupSOC, notes: 'Mockup SOC - Fechamento da apresentação' },
   ]
 
   const nextSlide = () => {
@@ -1717,7 +2155,7 @@ export default function ProfessionalPresentation() {
   const CurrentSlideComponent = slides[current].component
 
   return (
-    <div className={`min-h-screen flex flex-col font-inter text-neutral-200 ${theme === 'high-contrast' ? 'bg-black' : 'bg-neutral-950'}`}>
+    <div className={`min-h-screen flex flex-col font-inter text-neutral-200 ${theme === 'high-contrast' ? 'bg-black' : 'bg-gray-900'}`}>
       <div className="flex-1 relative overflow-hidden">
         <AnimatePresence mode="wait" custom={direction}>
           <PageTransition key={current} direction={direction}>
@@ -1820,7 +2258,7 @@ export default function ProfessionalPresentation() {
                     <FileText className="w-5 h-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-slate-100">Notas do Slide</h3>
+                    <h3 className="font-semibold font-montserrat text-slate-100">Notas do Slide</h3>
                     <p className="text-xs text-slate-400">
                       Slide {current + 1} de {slides.length}
                     </p>

@@ -26,7 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${inter.variable} ${montserrat.variable} font-inter bg-slate-950 text-slate-100 antialiased`}>
+      <body className={`${inter.variable} ${montserrat.variable} font-inter bg-gray-900 text-slate-100 antialiased`}>
         {children}
       </body>
     </html>
