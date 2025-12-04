@@ -57,6 +57,7 @@ import { NessText } from '@/components/ui/ness-text'
 
 // Advanced Components
 import { MetricsDashboardRich } from '@/components/advanced/MetricsDashboardRich'
+import { MermaidDiagram } from '@/components/visualization/MermaidDiagram'
 
 // Professional Components
 import { SlideLayout, ContentContainer } from '@/components/slides/SlideLayout'
@@ -338,6 +339,20 @@ function Slide03_OQueIAPodeFazer() {
 
 // ========== SLIDE 4: BASE DE CONHECIMENTO ==========
 function Slide04_BaseConhecimento() {
+  const ragDiagram = `graph LR
+    A[Usuário faz pergunta] --> B[Busca Vetorial]
+    B --> C[(Base de Conhecimento<br/>Privada)]
+    C --> D[Documentos Relevantes]
+    D --> E[LLM + Contexto]
+    E --> F[Resposta com Citações]
+    
+    style A fill:#1e293b,stroke:#00ade8,stroke-width:2px,color:#e2e8f0
+    style B fill:#1e293b,stroke:#00ade8,stroke-width:2px,color:#e2e8f0
+    style C fill:#0f172a,stroke:#00ade8,stroke-width:3px,color:#e2e8f0
+    style D fill:#1e293b,stroke:#00ade8,stroke-width:2px,color:#e2e8f0
+    style E fill:#1e293b,stroke:#00ade8,stroke-width:2px,color:#e2e8f0
+    style F fill:#1e293b,stroke:#10b981,stroke-width:2px,color:#e2e8f0`
+
   return (
     <SlideLayout
       title="Nossa abordagem: Base de Conhecimento Inteligente"
@@ -346,9 +361,16 @@ function Slide04_BaseConhecimento() {
     >
       <ContentContainer variant="stack" gap={6}>
         <div className="space-y-6">
+          {/* Mermaid Diagram */}
+          <MermaidDiagram
+            code={ragDiagram}
+            title="Arquitetura RAG (Retrieval-Augmented Generation)"
+            theme="dark"
+          />
+
           <div>
             <h3 className="text-lg font-medium font-montserrat text-primary-400 mb-4">Repositório privado e conectado aos sistemas da Perfin:</h3>
-            <ul className="space-y-3 text-lg text-neutral-300 leading-relaxed">
+            <ul className="space-y-3 text-lg text-slate-300 leading-relaxed">
               <li className="flex items-start gap-3">
                 <span className="text-primary-400 mt-1">•</span>
                 <span>Documentos reais: contratos, DDs, balanços, releases, regulamentos CVM</span>
@@ -365,17 +387,17 @@ function Slide04_BaseConhecimento() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="p-4 bg-neutral-900/50 rounded-lg border border-neutral-800">
-              <h4 className="font-medium text-neutral-200 mb-3">Benefícios:</h4>
-              <ul className="space-y-2 text-sm text-neutral-400">
+            <div className="p-4 bg-slate-900/50 rounded-lg border border-slate-800">
+              <h4 className="font-medium text-slate-200 mb-3">Benefícios:</h4>
+              <ul className="space-y-2 text-sm text-slate-400">
                 <li>✓ Redução drástica de alucinação</li>
                 <li>✓ Precisão jurídica, financeira e operacional</li>
                 <li>✓ Compliance: trilha de auditoria</li>
               </ul>
             </div>
-            <div className="p-4 bg-neutral-900/50 rounded-lg border border-neutral-800">
-              <h4 className="font-medium text-neutral-200 mb-3">Integração potencial:</h4>
-              <ul className="space-y-2 text-sm text-neutral-400">
+            <div className="p-4 bg-slate-900/50 rounded-lg border border-slate-800">
+              <h4 className="font-medium text-slate-200 mb-3">Integração potencial:</h4>
+              <ul className="space-y-2 text-sm text-slate-400">
                 <li>• SharePoint / Google Drive / Sistema de RI</li>
                 <li>• TOTVS RM (relatórios estruturados)</li>
                 <li>• APIs de sistemas internos</li>
@@ -383,7 +405,7 @@ function Slide04_BaseConhecimento() {
             </div>
           </div>
 
-          <p className="text-sm text-neutral-500 italic pt-4">
+          <p className="text-sm text-slate-500 italic pt-4">
             (Rodapé: Implementado com RAG - Retrieval Augmented Generation)
           </p>
         </div>
