@@ -170,13 +170,11 @@ function Slide01_Titulo() {
           </h1>
 
           <p className="text-lg md:text-xl text-neutral-300 font-light leading-relaxed max-w-4xl mx-auto">
-            Acelerando análise de investimentos, jurídico e backoffice com segurança regulatória
+            Da informação à decisão: inteligência no core da operação
           </p>
 
           <div className="pt-8">
-            <p className="text-xl text-primary-400 font-medium">
-              NESS Processos e Tecnologia
-            </p>
+            <NessText variant="dark" size="2xl" />
           </div>
         </motion.div>
       </div>
