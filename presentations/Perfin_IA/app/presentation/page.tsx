@@ -55,6 +55,9 @@ import {
 import { Button } from '@/components/ui/button'
 import { NessText } from '@/components/ui/ness-text'
 
+// Advanced Components
+import { MetricsDashboardRich } from '@/components/advanced/MetricsDashboardRich'
+
 // Professional Components
 import { SlideLayout, ContentContainer } from '@/components/slides/SlideLayout'
 import { DataCard, MiniDataCard } from '@/components/slides/DataCard'
@@ -181,6 +184,40 @@ function Slide01_Titulo() {
 
 // ========== SLIDE 2: PERFIN HOJE - O DESAFIO DE ESCALA ==========
 function Slide02_PerfinHoje() {
+  const portfolioMetrics = [
+    {
+      label: 'Ativos em Portfólio',
+      value: '15+',
+      icon: TrendingUp,
+      color: 'blue' as const,
+      trend: { value: 25, direction: 'up' as const },
+      sparklineData: [8, 10, 12, 13, 15]
+    },
+    {
+      label: 'Verticais de Negócio',
+      value: '8',
+      icon: Network,
+      color: 'purple' as const,
+      sparklineData: [5, 6, 7, 7, 8]
+    },
+    {
+      label: 'Documentos/Ano',
+      value: '2.5k+',
+      icon: FileText,
+      color: 'amber' as const,
+      trend: { value: 40, direction: 'up' as const },
+      sparklineData: [1200, 1600, 2000, 2300, 2500]
+    },
+    {
+      label: 'Horas Análise/Mês',
+      value: '1.2k+',
+      icon: Clock,
+      color: 'rose' as const,
+      trend: { value: 35, direction: 'up' as const },
+      sparklineData: [600, 800, 1000, 1100, 1200]
+    }
+  ]
+
   return (
     <SlideLayout
       title="Perfin hoje: O desafio de escala"
@@ -189,9 +226,15 @@ function Slide02_PerfinHoje() {
     >
       <ContentContainer variant="stack" gap={6}>
         <div className="space-y-6">
+          {/* Metrics Dashboard */}
+          <MetricsDashboardRich
+            metrics={portfolioMetrics}
+            columns={4}
+          />
+
           <div>
             <h3 className="text-lg font-medium font-montserrat text-primary-400 mb-4">Complexidade e diversificação crescentes:</h3>
-            <ul className="space-y-3 text-lg text-neutral-300 leading-relaxed">
+            <ul className="space-y-3 text-lg text-slate-300 leading-relaxed">
               <li className="flex items-start gap-3">
                 <span className="text-primary-400 mt-1">•</span>
                 <span>Portfólio diversificado em infraestrutura e equity</span>
@@ -210,21 +253,21 @@ function Slide02_PerfinHoje() {
           <div className="pt-4">
             <h3 className="text-lg font-medium font-montserrat text-primary-400 mb-4">Áreas com pressão identificadas:</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="p-4 bg-neutral-900/50 rounded-lg border border-neutral-800">
-                <p className="font-medium text-neutral-200 mb-2">Jurídico:</p>
-                <p className="text-sm text-neutral-400">Análise de contratos de concessão, PPPs, acordos de acionistas</p>
+              <div className="p-4 bg-slate-900/50 rounded-lg border border-slate-800">
+                <p className="font-medium text-slate-200 mb-2">Jurídico:</p>
+                <p className="text-sm text-slate-400">Análise de contratos de concessão, PPPs, acordos de acionistas</p>
               </div>
-              <div className="p-4 bg-neutral-900/50 rounded-lg border border-neutral-800">
-                <p className="font-medium text-neutral-200 mb-2">Backoffice:</p>
-                <p className="text-sm text-neutral-400">Interpretação de relatórios TOTVS RM, conciliações, auditorias</p>
+              <div className="p-4 bg-slate-900/50 rounded-lg border border-slate-800">
+                <p className="font-medium text-slate-200 mb-2">Backoffice:</p>
+                <p className="text-sm text-slate-400">Interpretação de relatórios TOTVS RM, conciliações, auditorias</p>
               </div>
-              <div className="p-4 bg-neutral-900/50 rounded-lg border border-neutral-800">
-                <p className="font-medium text-neutral-200 mb-2">Investimentos em Ações:</p>
-                <p className="text-sm text-neutral-400">Síntese de balanços, releases, comparações setoriais</p>
+              <div className="p-4 bg-slate-900/50 rounded-lg border border-slate-800">
+                <p className="font-medium text-slate-200 mb-2">Investimentos em Ações:</p>
+                <p className="text-sm text-slate-400">Síntese de balanços, releases, comparações setoriais</p>
               </div>
-              <div className="p-4 bg-neutral-900/50 rounded-lg border border-neutral-800">
-                <p className="font-medium text-neutral-200 mb-2">Relação com Investidores:</p>
-                <p className="text-sm text-neutral-400">Construção de narrativas e apresentações</p>
+              <div className="p-4 bg-slate-900/50 rounded-lg border border-slate-800">
+                <p className="font-medium text-slate-200 mb-2">Relação com Investidores:</p>
+                <p className="text-sm text-slate-400">Construção de narrativas e apresentações</p>
               </div>
             </div>
           </div>
